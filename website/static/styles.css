@@ -1,20 +1,61 @@
+html {
+   min-height: 100vh;
+}
+
 body {
    background: linear-gradient(45deg, #493dd3, #2077ad);
-   color: #ddd;
-   height: 100vh;
+   color: #bbf;
 }
 
 nav.bg-dark {
    background: #0b1d31 !important;
 }
 
+ul.list-group {
+   max-width: 640px;
+   margin: 0 auto;
+   border-radius: 15px;
+   overflow: hidden;
+   box-shadow: 0 0 11px 6px #00000033;
+}
+
+.list-group-item {
+   background-color: #000000ba;
+   margin-bottom: 1px;
+   border: none;
+}
+
+h1 {
+   color: #0b1c32;
+   font-weight: bold;
+}
+
 form {
    background: #000000ba;
    max-width: 640px;
    box-shadow: 0 0 11px 6px #00000033;
-   margin: 50px auto 0;
+   margin: 50px auto;
    padding: 50px;
+   border-radius: 20px;
+   /* transition: all 0.2s ease-out; */
+}
+
+.form-control {
+   background-color: #ffffff12;
+   border: none;
+   border-radius: 2px;
+   color: #ddd;
    border-radius: 30px;
+   transition: all 0.2s ease-out;
+}
+
+.form-control:focus {
+   background-color: #ffffff12;
+   outline: none;
+   box-shadow: none;
+   border-bottom: 2px solid #3282b8;
+   color: #ddd;
+   transform: scale(1.01);
 }
 
 textarea.form-control {
@@ -27,55 +68,35 @@ textarea.form-control:focus {
    border: none;
 }
 
-ul {
-   max-width: 640px;
-   margin: 0 auto;
-}
-
-.list-group-item {
-   background-color: #000000ba;
-   margin-bottom: 1px;
-   border: none;
-}
-
-.list-group-item:first-child {
-   border-radius: 15px 15px 0 0;
-}
-
-.list-group-item:last-child {
-   border-radius: 0 0 15px 15px;
-   margin-bottom: 0;
-}
-
 .btn {
    border-radius: 25px;
    outline: none;
-   background: #286bb5;
+   background: linear-gradient(to right, #3743b3, #2465a8);
    border: none;
    width: 100%;
+   transition: all 0.2s ease-out;
 }
 
-.form-control {
-   background-color: #ffffff12;
-   border: none;
-   border-radius: 2px;
-   color: #ddd;
-   border-radius: 30px;
+.btn:hover {
+   transform: translateY(-1px) scale(1.01);
 }
 
-.form-control:focus {
-   background-color: #ffffff12;
-   outline: none;
+/* .btn:active {
+   transform: scale(0.99);
    box-shadow: none;
-   border-bottom: 2px solid #3282b8;
-   color: #ddd;
 }
+
+.btn:focus {
+   box-shadow: none;
+} */
 
 .alert {
    border: none !important;
    color: #eee !important;
    background-color: #0000005e;
-   margin: 15px;
+   margin: 25px auto 0;
+   max-width: 640px;
+   border-radius: 15px;
 }
 
 .close {
