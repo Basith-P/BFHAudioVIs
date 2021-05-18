@@ -3,14 +3,14 @@
 
 <form action="#">
    <label for="aud-in">Upload audio file</label>
-   <input class="form-control" type="file" name="audio" id="aud-in" />
+   <input class="form-control" type="file" name="audio" id="aud-in" accept=".mp3, .wav, .ogg" />
    <br />
    <div align="center">
       <button type="submit" class="btn btn-primary">Play</button>
    </div>
 </form>
 
-<form method="POST" class="home-form">
+<!-- <form method="POST" class="home-form">
    <textarea name="note" id="note" class="form-control"></textarea>
 
    <br />
@@ -28,6 +28,6 @@
       </button>
    </li>
    {% endfor %}
-</ul>
+</ul> -->
 
 {% endblock %}
