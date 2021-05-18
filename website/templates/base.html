@@ -20,10 +20,11 @@
       <title>{% block title %}Home{% endblock %}</title>
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
             <span class="navbar-toggler-icon"></span>
          </button>
+         <a class="navbar-brand" href="#">AudViz</a>
          <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
                {% if user.is_authenticated %}
