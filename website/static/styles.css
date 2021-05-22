@@ -11,6 +11,10 @@ nav.bg-dark {
    background: #0b1d31 !important;
 }
 
+.navbar-expand-sm {
+   justify-content: flex-end;  
+}
+
 ul.list-group {
    max-width: 640px;
    margin: 0 auto;
