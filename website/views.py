@@ -51,7 +51,7 @@ def upload():
 def delete_audio():
     audio = json.loads(request.data)
     audioId = audio['audioId']
-    audio = audio.query.get(audioId)
+    audio = audioDB.query.get(audioId)
     if audio:
         if audio.user_id == current_user.id:
             db.session.delete(audio)

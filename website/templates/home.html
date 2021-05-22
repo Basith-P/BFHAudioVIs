@@ -23,7 +23,7 @@
    {% for audio in user.audios %}
    <li class="list-group-item">
       {{ audio.id }} - {{ audio.name }} - {{ audio.mimetype }}
-      <button type="button" class="close" onClick="deleteNote({{audio.id}})">
+      <button type="button" class="close" onClick="deleteAudio({{ audio.id }})">
          <span aria-hidden="true">&times;</span>
       </button>
    </li>

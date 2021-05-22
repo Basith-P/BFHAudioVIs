@@ -1,8 +1,8 @@
-// function deleteNote(noteId) {
-//   fetch("/delete-note", {
-//     method: "POST",
-//     body: JSON.stringify({ noteId: noteId }),
-//   }).then((_res) => {
-//     window.location.href = "/";
-//   });
-// }
+function deleteAudio(audioId) {
+   fetch("/delete-audio", {
+      method: "POST",
+      body: JSON.stringify({ audioId: audioId }),
+   }).then((_res) => {
+      window.location.href = "/";
+   });
+}
