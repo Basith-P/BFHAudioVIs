@@ -1,12 +1,12 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
 <!-- <h1 align="center">Notes</h1> -->
 
-<form action="#">
+<form action="/" enctype="multipart/form-data" method="POST">
    <label for="aud-in">Upload audio file</label>
-   <input class="form-control" type="file" name="audio" id="aud-in" accept=".wav" />
+   <input class="form-control" type="file" name="aud-in" id="aud-in" accept=".wav, .mp3" />
    <br />
    <div align="center">
-      <input class="btn btn-primary" type="button" id="script" name="scriptbutton" value=" Play " onclick="vis()" />
+      <input class="btn btn-primary" type="submit" id="script" name="play" value=" Add to convert " />
    </div>
 </form>
 
@@ -17,17 +17,17 @@
    <div align="center">
       <button type="submit" class="btn btn-primary">Add Note</button>
    </div>
-</form>
+</form>-->
 
 <ul class="list-group list-group-flush" id="notes">
-   {% for note in user.notes %}
+   {% for audio in user.audios %}
    <li class="list-group-item">
-      {{ note.data }}
-      <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      {{ audio.id }} - {{ audio.name }} - {{ audio.mimetype }}
+      <button type="button" class="close" onClick="deleteNote({{audio.id}})">
          <span aria-hidden="true">&times;</span>
       </button>
    </li>
    {% endfor %}
-</ul> -->
+</ul>
 
 {% endblock %}
