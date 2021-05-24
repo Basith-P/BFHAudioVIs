@@ -1,12 +1,13 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
 <!-- <h1 align="center">Notes</h1> -->
 
-<form action="/" enctype="multipart/form-data" method="POST">
-   <label for="aud-in">Upload audio file</label>
+<form action="#" enctype="multipart/form-data" method="POST">
+   <h3>Hello {{ user.first_name }}</h3>
+   <label for="aud-in">Upload audio file (<i>Only .wav files are supported currently</i>)</label>
    <input class="form-control" type="file" name="aud-in" id="aud-in" accept=".wav, .mp3" />
    <br />
    <div align="center">
-      <input class="btn btn-primary" type="submit" id="script" name="play" value=" Add to convert " />
+      <input class="btn btn-primary" type="submit" id="script" name="play" value=" Add to convert " onclick="runVis()" />
    </div>
 </form>
 
@@ -22,7 +23,7 @@
 <ul class="list-group list-group-flush" id="notes">
    {% for audio in user.audios %}
    <li class="list-group-item">
-      {{ audio.id }} - {{ audio.name }} - {{ audio.mimetype }}
+      <span class="audio-title"> {{ audio.id }} - {{ audio.name }} - {{ audio.mimetype }} </span>
       <button type="button" class="close" onClick="deleteAudio({{ audio.id }})">
          <span aria-hidden="true">&times;</span>
       </button>

@@ -81,6 +81,10 @@ textarea.form-control:focus {
    background: linear-gradient(to right, #2a348a, #1e558d);
 }
 
+.play {
+   color: #fff;
+}
+
 /* .btn:active {
    transform: scale(0.99);
    box-shadow: none;

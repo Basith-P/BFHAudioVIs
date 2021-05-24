@@ -3,6 +3,7 @@ from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user
+import json
 
 
 auth = Blueprint('auth', __name__)
@@ -34,7 +35,6 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))
 
-
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
@@ -64,3 +64,11 @@ def sign_up():
             return redirect(url_for('views.home'))
 
     return render_template("sign_up.html", user=current_user)
+
+
+#Delete current user
+@auth.route('/deleteac', methods=['POST','GET'])
+@login_required
+def deleteac():
+    db.session
+    return redirect(url_for('auth.login'))
