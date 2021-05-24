@@ -28,6 +28,7 @@
          <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
                {% if user.is_authenticated %}
+               <span class="nav-item nav-link nav-user">Hello {{ user.first_name }}</span>
                <a class="nav-item nav-link" id="home" href="/">Home</a>
                <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
                <!-- <a class="nav-item nav-link" id="deleteac" href="/deleteac">Delete Account</a> -->

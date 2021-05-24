@@ -11,8 +11,12 @@ nav.bg-dark {
    background: #0b1d31 !important;
 }
 
-.navbar-expand-sm {
-   justify-content: flex-end;  
+#navbar {
+   justify-content: flex-end;
+}
+
+.nav-user {
+   color: #fff !important;
 }
 
 ul.list-group {
