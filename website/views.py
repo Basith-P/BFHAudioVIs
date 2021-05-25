@@ -1,10 +1,9 @@
-from os import path
-from pydub import AudioSegment
 from flask import Flask, Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
 from werkzeug.utils import secure_filename
 from .models import audioDB
 from . import db
+import json
 
 
 views = Blueprint('views', __name__)
@@ -24,18 +23,10 @@ def home():
             mimetype = audio.mimetype
             # filename = audio.filename
             filename = secure_filename(audio.filename)
-            flash(filename, category='error')
 
-            q = audioDB.query(audioDB.id).filter(audioDB.name==filename)
-            isexists = audioDB.query(q.exists()).scalar()
+            q = audioDB.query.filter_by(name = filename)
 
-            # for fname in audioDB.name:
-            #     if fname == filename:
-            #         flash("File name already exists", category='error')
-            #         isexists = True
-
-
-            if isexists == False:
+            if not q:
                 # if mimetype != 'audio/wav':
                 #     # files                                                                         
                 #     src = filename
@@ -56,7 +47,7 @@ def home():
                 db.session.commit()
                 flash(filename + " - type of file = " + mimetype, category='success')
             else:
-                flash("There is a file in the same name in the databse")
+                flash("filename already exists")
 
             ##################################################
             ##################################################
