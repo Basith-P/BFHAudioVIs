@@ -89,8 +89,16 @@ textarea.form-control:focus {
    background: linear-gradient(to right, #2a348a, #1e558d);
 }
 
+.play,
+.trash {
+   color: rgb(187 187 255 / 70%);
+   background: none;
+   border: none;
+   float: right;
+}
+
 .play {
-   color: #fff;
+   margin-right: 15px;
 }
 
 /* .btn:active {
@@ -111,14 +119,14 @@ textarea.form-control:focus {
    border-radius: 15px;
 }
 
-.close {
-   color: #fff;
+.trash:hover,
+.play:hover {
+   color: rgb(255 255 255 / 70%);
 }
 
-.close:hover {
-   color: white;
-}
-
-.close:active {
+.trash:active,
+.play:active,
+.trash:focus,
+.play:focus {
    outline: none;
 }

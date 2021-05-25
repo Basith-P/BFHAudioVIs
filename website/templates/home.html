@@ -24,8 +24,11 @@
    {% for audio in user.audios %}
    <li class="list-group-item">
       <span class="audio-title"> {{ audio.id }} - {{ audio.name }}</span>
-      <button type="button" class="close" onClick="deleteAudio({{ audio.id }})">
-         <span aria-hidden="true">&times;</span>
+      <button type="button" class="trash" onClick="deleteAudio({{ audio.id }})">
+         <i class="fas fa-trash"></i>
+      </button>
+      <button type="button" class="play" onClick="runvis({{ audio.id }})">
+         <i class="fas fa-play"></i>
       </button>
    </li>
    {% endfor %}
