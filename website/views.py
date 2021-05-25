@@ -24,9 +24,9 @@ def home():
             # filename = audio.filename
             filename = secure_filename(audio.filename)
 
-            q = audioDB.query.filter_by(name = filename)
+            q = audioDB.query.filter_by(name = filename).first()
 
-            if not q:
+            if q is None:
                 # if mimetype != 'audio/wav':
                 #     # files                                                                         
                 #     src = filename
@@ -45,7 +45,7 @@ def home():
                 audiofile = audioDB(audio=audio.read(), mimetype=mimetype, name=filename, user_id=current_user.id)
                 db.session.add(audiofile)
                 db.session.commit()
-                flash(filename + " - type of file = " + mimetype, category='success')
+                flash(filename + " added ", category='success')
             else:
                 flash("filename already exists")
 
