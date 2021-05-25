@@ -66,9 +66,3 @@ def sign_up():
     return render_template("sign_up.html", user=current_user)
 
 
-#Delete current user
-@auth.route('/deleteac', methods=['POST','GET'])
-@login_required
-def deleteac():
-    db.session
-    return redirect(url_for('auth.login'))

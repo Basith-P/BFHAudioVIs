@@ -66,16 +66,6 @@ form {
    transform: scale(1.01);
 }
 
-textarea.form-control {
-   border-radius: 15px;
-   min-height: 100px;
-}
-
-textarea.form-control:focus {
-   border-radius: 15px;
-   border: none;
-}
-
 .btn {
    border-radius: 25px;
    outline: none;
@@ -90,6 +80,7 @@ textarea.form-control:focus {
 }
 
 .play,
+.close,
 .trash {
    color: rgb(187 187 255 / 70%);
    background: none;
@@ -101,15 +92,6 @@ textarea.form-control:focus {
    margin-right: 15px;
 }
 
-/* .btn:active {
-   transform: scale(0.99);
-   box-shadow: none;
-}
-
-.btn:focus {
-   box-shadow: none;
-} */
-
 .alert {
    border: none !important;
    color: #eee !important;
@@ -120,13 +102,16 @@ textarea.form-control:focus {
 }
 
 .trash:hover,
+.close:hover,
 .play:hover {
    color: rgb(255 255 255 / 70%);
 }
 
 .trash:active,
 .play:active,
+.close:active,
 .trash:focus,
+.close:focus,
 .play:focus {
    outline: none;
 }

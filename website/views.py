@@ -21,36 +21,19 @@ def home():
           flash("Couldn't upload the audio!", category='error')
         else:
             mimetype = audio.mimetype
-            # filename = audio.filename
             filename = secure_filename(audio.filename)
 
             q = audioDB.query.filter_by(name = filename).first()
 
-            if q is None:
-                # if mimetype != 'audio/wav':
-                #     # files                                                                         
-                #     src = filename
-                #     dst = filename+".wav"
-
-                #     # convert wav to mp3                                                            
-                #     sound = AudioSegment.from_mp3(src)
-                #     sound.export(dst, format="wav")
-
-                #     filename = secure_filename(dst)
-                #     mimetype = dst.mimetype
-                # else:
-                #     filename = secure_filename(audio.filename)
-                #     mimetype = audio.mimetype
-                
+            if q is None or q.user_id != current_user.id:
                 audiofile = audioDB(audio=audio.read(), mimetype=mimetype, name=filename, user_id=current_user.id)
                 db.session.add(audiofile)
                 db.session.commit()
                 flash(filename + " added ", category='success')
             else:
                 flash("filename already exists")
-
-            ##################################################
-            ##################################################
+                flash(q.user_id)
+                flash(current_user.id)
 
     return render_template("home.html", user = current_user)
 
@@ -68,5 +51,3 @@ def delete_audio():
             db.session.commit()
 
     return jsonify({})
-
-# @view.route('/play')
