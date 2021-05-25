@@ -90,7 +90,8 @@ textarea.form-control:focus {
 }
 
 .play,
-.trash {
+.trash,
+.close {
    color: rgb(187 187 255 / 70%);
    background: none;
    border: none;
@@ -120,13 +121,16 @@ textarea.form-control:focus {
 }
 
 .trash:hover,
-.play:hover {
+.play:hover,
+.close:hover {
    color: rgb(255 255 255 / 70%);
 }
 
 .trash:active,
 .play:active,
+.close:active,
 .trash:focus,
+.close:focus,
 .play:focus {
    outline: none;
 }

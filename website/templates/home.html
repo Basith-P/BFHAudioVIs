@@ -23,7 +23,7 @@
 <ul class="list-group list-group-flush" id="notes">
    {% for audio in user.audios %}
    <li class="list-group-item">
-      <span class="audio-title"> {{ audio.id }} - {{ audio.name }}</span>
+      <span class="audio-title">{{ audio.name }}</span>
       <button type="button" class="trash" onClick="deleteAudio({{ audio.id }})">
          <i class="fas fa-trash"></i>
       </button>
