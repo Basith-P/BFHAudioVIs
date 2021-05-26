@@ -28,7 +28,11 @@ BFH/rec1TChqMMqWGUQgi/2021
 
 ## Libraries used
 
-Library Name - Version
+flask - 2.0.0
+Flask-SQLAlchemy - 2.5.1
+flask-login - 0.5.0
+pygame - 2.0.1
+numpy - 1.20.3
 
 ## How to configure
 
