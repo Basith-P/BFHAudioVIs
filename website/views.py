@@ -49,8 +49,6 @@ def delete_audio():
             db.session.commit()
 
     return jsonify({})
-<<<<<<< HEAD
-=======
 
 @views.route('/runvis', methods=['POST'])
 def rinvis():
@@ -186,4 +184,3 @@ def rinvis():
     pygame.quit()
 
     return jsonify({})
->>>>>>> 2c78b0b24b602f53646f4294c60118152a2260f7

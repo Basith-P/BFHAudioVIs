@@ -25,20 +25,18 @@ BFH/rec1TChqMMqWGUQgi/2021
 1. Creates and keeps user account data
 2. Takes an audio file as input
 3. Convert it to video by adding visulaizations
-4. Provide options for previewing and downloading it 
+4. Provide options for previewing and downloading it
 
 ## Libraries used
 
-flask - 2.0.0
-Flask-SQLAlchemy - 2.5.1
-flask-login - 0.5.0
-pygame - 2.0.1
-numpy - 1.20.3
+-  flask - 2.0.0
+-  Flask-SQLAlchemy - 2.5.1
+-  flask-login - 0.5.0
+-  pygame - 2.0.1
+-  numpy - 1.20.3
 
-## How to configure
+## How to Configure and Run
 
-Instructions for setting up project
-
-## How to Run
-
-Instructions for running
+1. Clone/pull/download the [BFHAudioVis](https://github.com/Basith-P/BFHAudioVIs)
+2. install dependencies with `pip install -r requirements.txt`
+3. run main.py

@@ -80,13 +80,8 @@ form {
 }
 
 .play,
-<<<<<<< HEAD
 .close,
 .trash {
-=======
-.trash,
-.close {
->>>>>>> 2c78b0b24b602f53646f4294c60118152a2260f7
    color: rgb(187 187 255 / 70%);
    background: none;
    border: none;
@@ -107,13 +102,8 @@ form {
 }
 
 .trash:hover,
-<<<<<<< HEAD
-.close:hover,
-.play:hover {
-=======
 .play:hover,
 .close:hover {
->>>>>>> 2c78b0b24b602f53646f4294c60118152a2260f7
    color: rgb(255 255 255 / 70%);
 }
 

@@ -6,8 +6,6 @@ function deleteAudio(audioId) {
       window.location.href = "/";
    });
 }
-<<<<<<< HEAD
-=======
 
 function runvis(audioId) {
    fetch("/rinvis", {
