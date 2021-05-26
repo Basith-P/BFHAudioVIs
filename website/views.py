@@ -32,8 +32,6 @@ def home():
                 flash(filename + " added ", category='success')
             else:
                 flash("filename already exists")
-                flash(q.user_id)
-                flash(current_user.id)
 
     return render_template("home.html", user = current_user)
 
